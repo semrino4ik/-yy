@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Earn</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="header">
+        <p id="playerName">Ім'я гравця: Микола</p>
+        <button id="settingsButton">Налаштування</button>
+    </div>
+
+    <div id="energyDisplay">Енергія: <span id="energy">100</span></div>
+
+    <!-- Модальне вікно -->
+    <div id="modalOverlay">
+        <div id="modalContent">
+            <h2>Налаштування</h2>
+            <button class="modalButton" onclick="restartGame()">Перезавантажити гру</button>
+            <button class="modalButton" onclick="deleteAccount()">Видалити акаунт</button>
+            <button class="modalButton" onclick="chooseLanguage()">Вибір мови</button>
+            <button class="modalButton" onclick="closeModal()">Закрити</button>
+        </div>
+    </div>
+
+    <!-- Вкладки -->
+    <div id="gameContainer">
+        <div id="hamster" onclick="handleTap()"></div>
+    </div>
+
+    <div id="incomeTabContent" class="tab-content" style="display: none;">
+        Це ваш погодинний дохід.
+    </div>
+
+    <div id="upgradesTabContent" class="tab-content" style="display: none;">
+        Тут можна покращити ваші можливості.
+    </div>
+
+    <div id="earningsDisplay">Ваші заробітки: $<span id="earnings">0</span></div>
+    <div id="levelDisplay">Рівень: <span id="level">1</span>, Досвід: <span id="experience">0/100</span></div>
+    
+    <div id="experienceProgressContainer">
+        <div id="experienceProgress"></div>
+    </div>
+
+    <div id="navBar">
+        <button class="navButton" id="hamsterTab">Хом'як</button>
+        <button class="navButton" id="incomeTab">Погодинний дохід</button>
+        <button class="navButton" id="upgradesTab">Покращення</button>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
